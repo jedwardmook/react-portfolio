@@ -19,10 +19,10 @@ function NavBar({navLinks, style}) {
   )
 }
 
-  NavBar.propTypes = {
-    navLinks : PropTypes.object.isRequired,
-    style: PropTypes.object
-  };
+      NavBar.propTypes = {
+        navLinks : PropTypes.object.isRequired,
+        style: PropTypes.object
+      };
 
 
 
