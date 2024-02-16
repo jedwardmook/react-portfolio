@@ -31,6 +31,13 @@ a {
   list-style-type: none;
 }
 
+.mobileclosed {
+  display: none;
+}
+
+.mobileopen {
+  display: none;
+}
 
 @media (width <= 466px){
   .nav {
@@ -47,10 +54,6 @@ a {
     cursor: pointer;
     padding-top: .35rem;
     margin-right: -1rem;
-  }
-
-  .mobileclosed {
-    display: none;
   }
 
   .mobileopen {
