@@ -1,3 +1,20 @@
+shared:
+  ci_success: &ci_success
+    - "check-success=Build and Test"
+  queue_conditions: &queue_conditions
+    - -label=Hold merge
+    - -label=Addressing issues
+    - -conflict
+    - "#approved-reviews-by>=1"
+  default_queue_conditions: &default_queue_conditions
+    - and: *ci_success
+    - and: *queue_conditions
+
+queue_rules:
+  - name: default
+    queue_conditions:
+      - and: *default_queue_conditions
+
 pull_request_rules:
   # PR approval rules
   - name: Add bot approval for PRs ready to merge
@@ -6,3 +23,11 @@ pull_request_rules:
     actions:
       review:
         type: APPROVE
+  # PR queue rules
+  - name: Add PR to default queue
+    conditions:
+      - and: *default_queue_conditions
+    actions:
+      queue:
+        name: default
+        allow_merging_configuration_change: true
