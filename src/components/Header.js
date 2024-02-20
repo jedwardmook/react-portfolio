@@ -26,7 +26,7 @@ function Header() {
           navLinks={navLinks}
           style={styles.nav}
         />
-        <button onClick={handleOpen}><img src={isOpen? close: menu}/></button>
+        <button onClick={handleOpen} className={styles.navbutton}><img src={isOpen? close: menu}/></button>
       </div>
       {isOpen&&
       <div>

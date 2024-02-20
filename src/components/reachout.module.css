@@ -1,0 +1,14 @@
+.reachout {
+  background-image: linear-gradient(var(--purple-color), var(--green-color));
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.reachoutcontainer {
+  transform: skew(-10deg, 5deg);
+  background-color: var(--purple-color);
+  width: 80vw;
+  z-index: 1;
+}

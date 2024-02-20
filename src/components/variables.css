@@ -1,6 +1,14 @@
 :root {
-    --green-color: #043602;
-    --peach-color: #FF6868;
-    --neue-family: helveticaneue, helvetica, sans-serif;
-    --condensedblack-family: helveticaneue-condensedblack, helvetica, sans-serif;
+  /* colors */
+  --green-color: #043602;
+  --peach-color: #FF6868;
+  --yellow-color: #FFE58A;
+  --purple-color: #8A94FF;
+
+  /* effects */
+  --dropshadow: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
+
+  /* fonts */
+  --neue-family: helveticaneue, helvetica, sans-serif;
+  --condensedblack-family: helveticaneue-condensedblack, helvetica, sans-serif;
 }
