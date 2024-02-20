@@ -1,5 +1,14 @@
 header {
   z-index: 2;
+
+  a {
+    font-family: var(--condensedblack-family);
+    font-size: 1.25rem;
+    color: var(--peach-color);
+    text-decoration: none;
+    -webkit-text-stroke: 1px black;
+    filter: var(--dropshadow);
+  }
 }
 
 .header {
@@ -10,16 +19,6 @@ header {
   height: 4rem;
   padding: 0 2rem;
   filter: var(--dropshadow);
-
-  a {
-    font-family: var(--condensedblack-family);
-    font-size: 1.25rem;
-    color: var(--peach-color);
-    text-decoration: none;
-    -webkit-text-stroke: 1px black;
-    filter: var(--dropshadow);
-  }
-
 }
 
 .logo {
