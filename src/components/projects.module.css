@@ -1,0 +1,21 @@
+.projects {
+  background-color: var(--purple-color) ;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.projectcontainer {
+  transform: skew(-4deg, -15deg);
+  background-color: var(--peach-color);
+  width: 80vw;
+  z-index: 0;
+
+  h2 {
+    font-family: var(--condensedblack-family);
+    transform: skew(4deg, 15deg);
+    text-align: right;
+    margin-right: 1rem;
+  }
+}
