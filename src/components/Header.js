@@ -26,13 +26,13 @@ function Header() {
           navLinks={navLinks}
           style={styles.nav}
         />
-        <button onClick={handleOpen} className={styles.navbutton}><img src={isOpen? close: menu}/></button>
+        <button onClick={handleOpen} className={styles['nav-button']}><img src={isOpen? close : menu}/></button>
       </div>
       {isOpen&&
-      <div>
+      <div className={styles['mobile-active']}>
         <NavLinks
           navLinks={navLinks}
-          style={isOpen? styles.mobileopen : styles.mobileclosed}
+          style={isOpen? styles['mobile-open'] : styles['mobile-closed']}
           handleOpen={handleOpen}
         />
       </div>
