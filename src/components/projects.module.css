@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-.projectcontainer {
+.project-container {
   transform: skew(-4deg, -15deg);
   background-color: var(--peach-color);
   width: 80vw;
