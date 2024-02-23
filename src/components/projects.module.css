@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-.projectcontainer {
+.project-container {
   transform: skew(-4deg, -15deg);
   background-color: var(--peach-color);
   width: 80vw;
@@ -16,6 +16,9 @@
     font-family: var(--condensedblack-family);
     transform: skew(4deg, 15deg);
     text-align: right;
-    margin-right: 1rem;
+    font-size: 15vw;
+    margin: 2rem 1rem;
+    -webkit-text-stroke: 2px black;
+    color: white;
   }
 }

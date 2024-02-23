@@ -19,7 +19,7 @@
   margin: .5rem 0;
 }
 
-.infodiv {
+.info-div {
   background-color: var(--green-color);
   width: 80vw;
   transform: skew(3deg, 12deg);
@@ -50,7 +50,7 @@ span {
   padding-top: 3vw;
 }
 
-.straightendiv {
+.bio-div {
   margin: 2.5rem 1rem 1rem;
   transform: skew(-3deg, -12deg);
 }
@@ -62,7 +62,7 @@ span {
   cursor: pointer;
 }
 
-.buttonsdiv {
+.buttons-div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,7 +71,7 @@ span {
   filter: var(--dropshadow);
   padding-bottom: 10vw;
 
-  .socialsdiv {
+  .socials-div {
     display: flex;
     flex-direction: column;
     text-align: right;
@@ -91,7 +91,7 @@ span {
     }
   }
 
-  .button {
+  .reachout-button {
     background-color: var(--purple-color);
     border-radius: 100px;
     color: black;
