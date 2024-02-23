@@ -1,7 +1,7 @@
 import styles from './home.module.css';
 import me from '../images/me.png';
-import technologiesArr from '../assets/technologies.js';
-import socialLinks from '../assets/socials.js';
+import technologiesArr from '../data/technologies.js';
+import socialLinks from '../data/socials.js';
 
 function Home() {
 
