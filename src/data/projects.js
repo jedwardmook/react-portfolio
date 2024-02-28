@@ -47,7 +47,8 @@ const projects = [
       },
       {
         link: scc_home,
-        description: "Home page featuring spot markers and spot info div"},
+        description: "Home page featuring spot markers and spot info div"
+      },
       {
         link: scc_spot_page,
         description: "Spot page featuring info and images of spot"

@@ -16,8 +16,8 @@ module.exports = {
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
-    // eslint-disable-next-line no-undef
-    "no-debugger": process.env.NODE_ENV === 'production' ? 2 : 0
+    "no-debugger": process.env.NODE_ENV === 'production' ? 2 : 0,
+    "no-console": "warn"
   },
   "env": {
     "browser": true,

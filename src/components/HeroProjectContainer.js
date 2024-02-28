@@ -12,7 +12,7 @@ function HeroProjectContainer({styles, heroProject}) {
   })
 
   const link = links.map((obj, index) => {
-    return <a key={index} href={obj.link}>{obj.type}</a>
+    return <p key={index}><a href={obj.link}>{obj.type}</a></p>
   })
 
   return (
@@ -25,9 +25,7 @@ function HeroProjectContainer({styles, heroProject}) {
         <h5>Project: </h5><p>{projectName}</p>
         <h5>Technologies: </h5><p>{tech}</p>
         <h5>Description: </h5><p>{description}</p>
-        <div className={styles['links-div']}>
-          {link}
-        </div>
+        <h5>Links: </h5>{link}
       </div>
     </div>
   )
