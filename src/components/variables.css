@@ -11,4 +11,6 @@
   /* fonts */
   --neue-family: helveticaneue, helvetica, sans-serif;
   --condensedblack-family: helveticaneue-condensedblack, helvetica, sans-serif;
+
+  scroll-behavior: smooth;
 }

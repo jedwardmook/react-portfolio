@@ -1,17 +1,18 @@
 .projects {
-  background-color: var(--purple-color) ;
+  background-image: linear-gradient(var(--yellow-color), var(--purple-color), var(--purple-color), var(--green-color));
   width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
   font-family: var(--condensedblack-family);
+  z-index: -1;
 }
 
 .project-container {
   transform: skew(-4deg, -15deg);
   background-color: var(--peach-color);
   width: 80vw;
-  z-index: 0;
+  z-index: 1;
 
   h2 {
     transform: skew(4deg, 15deg);
