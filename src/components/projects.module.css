@@ -13,6 +13,7 @@
   background-color: var(--peach-color);
   width: 80vw;
   z-index: 1;
+  filter: var(--dropshadow);
 
   h2 {
     transform: skew(4deg, 15deg);

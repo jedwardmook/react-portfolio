@@ -14,6 +14,8 @@
   width: 80vw;
   z-index: 0;
   font-family: var(--condensedblack-family);
+  margin-bottom: 3vw;
+  filter: var(--dropshadow);
 
   .reach-out-info {
     transform: skew(10deg, -5deg);
