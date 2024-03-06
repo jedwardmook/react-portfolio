@@ -29,6 +29,7 @@ function ReachOut() {
         })
         .then(
           () => {
+            // eslint-disable-next-line no-console
             console.log('SUCCESS!');
             setFormValues({
               contactName: '',
@@ -38,10 +39,12 @@ function ReachOut() {
             });
           },
           (error) => {
+            // eslint-disable-next-line no-console
             console.log('FAILED...', error.text);
           },
         );
       } else {
+        // eslint-disable-next-line no-console
         console.log("Name, email, and message cannot be blank")
       }
   };
