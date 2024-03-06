@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 function HeroProjectContainer({styles, heroProject}) {
-  // eslint-disable-next-line no-unused-vars
   const {projectName, images, technologiesUsed, links, description} = heroProject
 
   const tech = technologiesUsed.map((tech, index) => {

@@ -5,7 +5,7 @@
   width: 100%;
   height: auto;
   top: 4rem;
-  background-image: linear-gradient(var(--yellow-color), var(--purple-color));
+  background-color: var(--yellow-color);
   z-index: -1;
 }
 

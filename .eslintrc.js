@@ -16,8 +16,10 @@ module.exports = {
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
-    "no-debugger": process.env.NODE_ENV === 'production' ? 2 : 0,
-    "no-console": "warn"
+    "semi-style": process.env.NODE_ENV === 'production' ? 2: 1,
+    "no-debugger": process.env.NODE_ENV === 'production' ? 2 : 1,
+    "no-console": process.env.NODE_ENV === 'production' ? 2 : 1,
+    "no-unused-vars": process.env.NODE_ENV === 'production' ? 2 : 1,
   },
   "env": {
     "browser": true,
