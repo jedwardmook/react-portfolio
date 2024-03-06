@@ -28,45 +28,53 @@ function ReachOut() {
     });
   };
 
-  const sendEmail = (e) => {
+  const sendEmail =  async (e) => {
     e.preventDefault()
-    if (formValues.contactName && formValues.contactEmail && formValues.messageBody !== ''){
-      emailjs
-        .sendForm('service_9s7vueh', 'template_9kwp1h4', form.current, {
-          publicKey: '1FRD8OfceVnIcjUZK',
-        })
-        .then(
-          () => {
-            setIsOpen(!isOpen)
-            setModalProps({
-              ...modalProps,
-              status: 'Success!',
-              message: 'Thank you. Your email has been sent.'
-            })
-            setFormValues({
-              contactName: '',
-              contactEmail: '',
-              messageSubject: '',
-              messageBody: ''
-            });
-          },
-          (error) => {
-            setModalProps({
-              ...modalProps,
-              status: 'Error',
-              message: error.text
-            });
-          },
-        );
-      } else {
-        setIsOpen(!isOpen);
-        setModalProps({
-          ...modalProps,
-          status: 'Error',
-          message: 'Name, email, or body cannot be blank.'
-        })
+
+    let status;
+    let message;
+
+    if (
+      formValues.contactName
+      && formValues.contactEmail
+      && formValues.messageBody
+    ) {
+      try {
+        await emailjs.sendForm(
+          'service_9s7vueh',
+          'template_9kwp1h4',
+          form.current, {
+            publicKey: '1FRD8OfceVnIcjUZK',
+          }
+        )
+
+        status = 'Success!';
+        message = 'Thank you. Your email has been sent.';
+
+        setIsOpen(!isOpen)
+        setFormValues({
+          contactName: '',
+          contactEmail: '',
+          messageSubject: '',
+          messageBody: ''
+        });
+      } catch (error) {
+        status = 'Error';
+        message = error.text;
       }
-  };
+    } else {
+      setIsOpen(!isOpen);
+
+      status = 'Error';
+      message = 'Name, email, or body cannot be blank.';
+    }
+
+    setModalProps({
+      ...modalProps,
+      status,
+      message,
+    })
+  }
 
   return (
     <section className={styles['reach-out']}>
