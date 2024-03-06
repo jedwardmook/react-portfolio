@@ -1,7 +1,9 @@
 import { useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import styles from './reachout.module.css';
 import emailjs from '@emailjs/browser';
 import send from '../icons/send.svg'
+import ReachOutModal from './ReachOutModal';
 
 function ReachOut() {
   const form = useRef();
@@ -11,6 +13,12 @@ function ReachOut() {
     messageSubject: '',
     messageBody: ''
   });
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalProps, setModalProps] = useState({
+    status: '',
+    message: '',
+    buttonText: 'Okay'
+  })
 
   const handleForm = (e) => {
     const {name, value} = e.target
@@ -29,7 +37,12 @@ function ReachOut() {
         })
         .then(
           () => {
-            console.log('SUCCESS!');
+            setIsOpen(!isOpen)
+            setModalProps({
+              ...modalProps,
+              status: 'Success!',
+              message: 'Thank you. Your email has been sent.'
+            })
             setFormValues({
               contactName: '',
               contactEmail: '',
@@ -38,11 +51,20 @@ function ReachOut() {
             });
           },
           (error) => {
-            console.log('FAILED...', error.text);
+            setModalProps({
+              ...modalProps,
+              status: 'Error',
+              message: error.text
+            });
           },
         );
       } else {
-        console.log("Name, email, and message cannot be blank")
+        setIsOpen(!isOpen);
+        setModalProps({
+          ...modalProps,
+          status: 'Error',
+          message: 'Name, email, or body cannot be blank.'
+        })
       }
   };
 
@@ -103,6 +125,15 @@ function ReachOut() {
           </form>
         </div>
       </div>
+      {createPortal(
+        <ReachOutModal
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          modalProps={modalProps}
+          styles={styles}
+        />,
+        document.getElementById('modal-root')
+        )}
     </section>
   )
 }
