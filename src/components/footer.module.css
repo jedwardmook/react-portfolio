@@ -1,0 +1,18 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--peach-color);
+  font-family: var(--neue-family);
+  color: white;
+
+  p {
+    font-size: 2vw;
+  }
+
+  img {
+    width: 3vw;
+    cursor: pointer;
+    margin-left: 1vw;
+  }
+}
