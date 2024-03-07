@@ -44,8 +44,6 @@ function ProjectsContainer({styles, projects, setHeroProject}) {
           >{'>'}
         </button>
       </div>
-
-
     </div>
   )
 }
