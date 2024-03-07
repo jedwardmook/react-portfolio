@@ -1,7 +1,9 @@
 import { useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import styles from './reachout.module.css';
 import emailjs from '@emailjs/browser';
 import send from '../icons/send.svg'
+import ReachOutModal from './ReachOutModal';
 
 function ReachOut() {
   const form = useRef();
@@ -11,6 +13,12 @@ function ReachOut() {
     messageSubject: '',
     messageBody: ''
   });
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalProps, setModalProps] = useState({
+    status: '',
+    message: '',
+    buttonText: 'Okay'
+  })
 
   const handleForm = (e) => {
     const {name, value} = e.target
@@ -20,34 +28,53 @@ function ReachOut() {
     });
   };
 
-  const sendEmail = (e) => {
+  const sendEmail =  async (e) => {
     e.preventDefault()
-    if (formValues.contactName && formValues.contactEmail && formValues.messageBody !== ''){
-      emailjs
-        .sendForm('service_9s7vueh', 'template_9kwp1h4', form.current, {
-          publicKey: '1FRD8OfceVnIcjUZK',
-        })
-        .then(
-          () => {
-            // eslint-disable-next-line no-console
-            console.log('SUCCESS!');
-            setFormValues({
-              contactName: '',
-              contactEmail: '',
-              messageSubject: '',
-              messageBody: ''
-            });
-          },
-          (error) => {
-            // eslint-disable-next-line no-console
-            console.log('FAILED...', error.text);
-          },
-        );
-      } else {
-        // eslint-disable-next-line no-console
-        console.log("Name, email, and message cannot be blank")
+
+    let status;
+    let message;
+
+    if (
+      formValues.contactName
+      && formValues.contactEmail
+      && formValues.messageBody
+    ) {
+      try {
+        await emailjs.sendForm(
+          'service_9s7vueh',
+          'template_9kwp1h4',
+          form.current, {
+            publicKey: '1FRD8OfceVnIcjUZK',
+          }
+        )
+
+        status = 'Success!';
+        message = 'Thank you. Your email has been sent.';
+
+        setIsOpen(!isOpen)
+        setFormValues({
+          contactName: '',
+          contactEmail: '',
+          messageSubject: '',
+          messageBody: ''
+        });
+      } catch (error) {
+        status = 'Error';
+        message = error.text;
       }
-  };
+    } else {
+      setIsOpen(!isOpen);
+
+      status = 'Error';
+      message = 'Name, email, or body cannot be blank.';
+    }
+
+    setModalProps({
+      ...modalProps,
+      status,
+      message,
+    })
+  }
 
   return (
     <section className={styles['reach-out']}>
@@ -106,6 +133,15 @@ function ReachOut() {
           </form>
         </div>
       </div>
+      {createPortal(
+        <ReachOutModal
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          modalProps={modalProps}
+          styles={styles}
+        />,
+        document.getElementById('modal-root')
+        )}
     </section>
   )
 }
