@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function ProjectImagesViewer({ styles, images, isViewerOpen, setIsViewerOpen }) {
+function ProjectImagesViewer({ isViewerOpen, setIsViewerOpen }) {
   if (!isViewerOpen) return null;
 
   return (
