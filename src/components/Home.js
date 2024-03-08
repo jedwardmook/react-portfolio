@@ -13,12 +13,12 @@ function Home() {
           <div className={styles['bio-div']}>
           <p className={styles.about}>I&apos;m a Fullstack Software Engineer building web applications out of Chicago, IL. I&apos;m experienced with html, css, sass, javascript, typescript, react, ruby, and ruby on rails.</p>
           {technologiesArr.map((obj) => {
-            return <a key={obj.technology} href={obj.link}><img src={obj.icon} alt={obj.technology} className={styles.languagelink} /></a>
+            return <a key={obj.technology} href={obj.link} rel='noreferrer' target='_blank'><img src={obj.icon} alt={obj.technology} className={styles.languagelink} /></a>
           })}
           <div className={styles['buttons-div']}>
             <div className={styles['socials-div']}>
               {socialLinks.map((obj) => {
-                return <a key={obj.type} href={obj.address}>{obj.title}</a>
+                return <a key={obj.type} href={obj.address} rel='noreferrer' target='_blank'>{obj.title}</a>
               })}
             </div>
             <div>
