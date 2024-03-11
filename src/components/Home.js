@@ -22,7 +22,7 @@ function Home() {
               })}
             </div>
             <div>
-              <a href="#reachout" className={styles['reachout-button']}>Reach Out!</a>
+              <a href="#contact" className={styles['reachout-button']}>Reach Out!</a>
             </div>
           </div>
         </div>

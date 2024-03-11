@@ -4,6 +4,7 @@ import styles from './projects.module.css'
 import projects from '../data/projects.js'
 import ProjectsContainer from './ProjectsContainer.js'
 
+
 function Projects() {
   const [heroProject, setHeroProject] = useState(projects[0])
 
@@ -16,9 +17,9 @@ function Projects() {
           heroProject={heroProject}
         />
         <ProjectsContainer
-          styles={styles}
-          projects={projects}
-          setHeroProject={setHeroProject}
+          styles = {styles}
+          projects = {projects}
+          setHeroProject = {setHeroProject}
         />
       </div>
     </section>
