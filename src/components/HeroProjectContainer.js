@@ -32,14 +32,14 @@ function HeroProjectContainer({styles, heroProject}) {
         <h5>Links: </h5>{link}
       </div>
       {createPortal(
-          <ProjectImagesViewer
-            styles = {styles}
-            images = {images}
-            isViewerOpen = {isViewerOpen}
-            setIsViewerOpen = {setIsViewerOpen}
-          />,
-          document.getElementById('modal-root')
-        )}
+        <ProjectImagesViewer
+          styles = {styles}
+          images = {images}
+          isViewerOpen = {isViewerOpen}
+          setIsViewerOpen = {setIsViewerOpen}
+        />,
+        document.getElementById('modal-root')
+      )}
     </div>
   )
 }
