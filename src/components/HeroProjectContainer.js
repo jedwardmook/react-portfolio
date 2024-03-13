@@ -7,7 +7,6 @@ function HeroProjectContainer({styles, heroProject}) {
   const {projectName, images, technologiesUsed, links, description} = heroProject
   const [isViewerOpen, setIsViewerOpen] = useState(false);
 
-
   const tech = technologiesUsed.map((tech, index) => {
     if (index !== technologiesUsed.length - 1)
       return `${tech},`
@@ -20,12 +19,12 @@ function HeroProjectContainer({styles, heroProject}) {
   })
 
   return (
-    <div className={styles['hero-project-container-div']}>
-      <div className={styles['hero-project-image-div']}>
-        <img src={images[0].link} />
+    <div className={styles['hero-project-container']}>
+      <div className={styles['hero-project-image-container']}>
+        <img src={images[0].link} onClick={() => setIsViewerOpen(!isViewerOpen)} />
         <button onClick={() => setIsViewerOpen(!isViewerOpen)}>click for more images</button>
       </div>
-      <div className={styles['hero-project-info-div']}>
+      <div className={styles['hero-project-info-container']}>
         <h5>Project: </h5><p>{projectName}</p>
         <h5>Technologies: </h5><p>{tech}</p>
         <h5>Description: </h5><p>{description}</p>

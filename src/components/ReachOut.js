@@ -83,7 +83,7 @@ function ReachOut() {
           <h2>REACH OUT!</h2>
           <form ref={form} onSubmit={sendEmail}>
             <div>
-              <div className={styles['form-stacked-div']}>
+              <div className={styles['form-stacked-container']}>
                 <label htmlFor='contactName'>Name:</label>
                 <input
                   type='text'
@@ -94,7 +94,7 @@ function ReachOut() {
                   className={styles['small-input']}
                 />
               </div>
-              <div className={styles['form-stacked-div']}>
+              <div className={styles['form-stacked-container']}>
                 <label htmlFor='contactEmail'>Email:</label>
                 <input
                   type='email'
@@ -106,7 +106,7 @@ function ReachOut() {
                 />
               </div>
             </div>
-            <div className={styles['form-stacked-div']}>
+            <div className={styles['form-stacked-container']}>
               <label htmlFor='messageSubject'>Subject:</label>
               <input
                 type='text'
@@ -116,7 +116,7 @@ function ReachOut() {
                 placeholder='Subject'
               />
             </div>
-            <div className={styles['form-stacked-div']}>
+            <div className={styles['form-stacked-container']}>
               <label htmlFor='messageBody'>Body:</label>
               <textarea
                 type='text'

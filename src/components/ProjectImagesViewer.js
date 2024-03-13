@@ -13,11 +13,11 @@ function ProjectImagesViewer({ styles, images, isViewerOpen, setIsViewerOpen }) 
 
   return (
     <div className={styles['image-viewer-background']}>
-      <div className={styles['image-viewer-div']}>
-        <div className={styles['image-viewer-close-div']}>
+      <div className={styles['image-viewer-container']}>
+        <div className={styles['image-viewer-close-container']}>
           <button className={styles['image-viewer-close']} onClick={() => setIsViewerOpen(!isViewerOpen)}><img src={close} /></button>
         </div>
-        <div className={styles['image-viewer-hero-div']}>
+        <div className={styles['image-viewer-hero-container']}>
           <img className={styles['image-viewer-hero-image']} src={heroImage.link} alt={heroImage.description}/>
           <p>{heroImage.description}</p>
         </div>
