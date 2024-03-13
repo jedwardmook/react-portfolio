@@ -43,7 +43,7 @@
       justify-content: space-between;
     }
 
-    .form-stacked-div {
+    .form-stacked-container {
       display: flex;
       flex-direction: column;
       font-size: 2.25vw;

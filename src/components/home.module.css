@@ -19,7 +19,7 @@
   margin: .5rem 0;
 }
 
-.info-div {
+.info-container {
   background-color: var(--green-color);
   width: 80vw;
   transform: skew(3deg, 12deg);
@@ -50,7 +50,7 @@ span {
   padding-top: 3vw;
 }
 
-.bio-div {
+.bio-container {
   margin: 2.5rem 1rem 1rem;
   transform: skew(-3deg, -12deg);
 }
@@ -62,7 +62,7 @@ span {
   cursor: pointer;
 }
 
-.buttons-div {
+.buttons-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,7 +71,7 @@ span {
   filter: var(--dropshadow);
   padding-bottom: 10vw;
 
-  .socials-div {
+  .socials-container {
     display: flex;
     flex-direction: column;
     text-align: right;

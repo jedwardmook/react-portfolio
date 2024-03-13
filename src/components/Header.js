@@ -20,7 +20,7 @@ function Header() {
 
   return (
     <header>
-      <div className={styles['header-div']}>
+      <div className={styles['header-container']}>
         <h2><a className={styles.logo} href='#home'>John E Mook</a></h2>
         <NavLinks
           navLinks={navLinks}
