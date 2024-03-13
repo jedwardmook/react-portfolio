@@ -21,7 +21,7 @@ function HeroProjectContainer({styles, heroProject}) {
   return (
     <div className={styles['hero-project-container']}>
       <div className={styles['hero-project-image-container']}>
-        <img src={images[0].link} />
+        <img src={images[0].link} onClick={() => setIsViewerOpen(!isViewerOpen)} />
         <button onClick={() => setIsViewerOpen(!isViewerOpen)}>click for more images</button>
       </div>
       <div className={styles['hero-project-info-container']}>
