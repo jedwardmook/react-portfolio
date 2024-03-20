@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 
-function NavLinks({navLinks, style, handleOpen}) {
+function NavLinks({navLinks, linksStyle, handleOpen, styles}) {
 
   return (
     <nav onClick={handleOpen}>
-      <ul className={style}>
+      <ul className={linksStyle}>
         {
           navLinks.map((link, index) => {
             return (
-              <li key={index}><a href={`#${link.toLowerCase()}`}>{link}</a></li>
+              <li key={index}><a className={styles['nav-link']} href={`#${link.toLowerCase()}`}>{link}</a></li>
             )
           })
         }
@@ -18,9 +18,10 @@ function NavLinks({navLinks, style, handleOpen}) {
 }
 
 NavLinks.propTypes = {
-  navLinks : PropTypes.array.isRequired,
-  style: PropTypes.string,
-  handleOpen: PropTypes.func
+  navLinks: PropTypes.array.isRequired,
+  linksStyle: PropTypes.string,
+  handleOpen: PropTypes.func,
+  styles: PropTypes.object
 };
 
 export default NavLinks

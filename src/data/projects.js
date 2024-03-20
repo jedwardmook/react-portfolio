@@ -125,7 +125,7 @@ const projects = [
       },
       {
         link: flw_note,
-        description: "Form for adding a not to the database"
+        description: "Form for adding a note to the database"
       },
       {
         link: flw_employee,

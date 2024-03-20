@@ -11,7 +11,7 @@ function Projects() {
   return (
     <section id='projects' className={styles.projects}>
       <div className={styles['project-container']}>
-        <h2>Projects</h2>
+        <h2 className={styles['projects-title']}>Projects</h2>
         <HeroProjectContainer
           styles={styles}
           heroProject={heroProject}

@@ -141,7 +141,7 @@ function ReachOut() {
           styles={styles}
         />,
         document.getElementById('modal-root')
-        )}
+      )}
     </section>
   )
 }

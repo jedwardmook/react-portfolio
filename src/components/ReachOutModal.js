@@ -5,13 +5,13 @@ function ReachOutModal({isOpen, setIsOpen, modalProps, styles}) {
   if (!isOpen) return null;
 
   return (
-      <div className={styles['modal-background']}>
-        <dialog className={styles['modal-dialog']} open={isOpen}>
-          <h3>{modalProps.status}</h3>
-          <p>{modalProps.message}</p>
-          <button className={styles['modal-button']} onClick={() => setIsOpen(!isOpen)}><strong>{modalProps.buttonText}</strong></button>
-        </dialog>
-      </div>
+    <div className={styles['modal-background']}>
+      <dialog className={styles['modal-dialog']} open={isOpen}>
+        <h3>{modalProps.status}</h3>
+        <p>{modalProps.message}</p>
+        <button className={styles['modal-button']} onClick={() => setIsOpen(!isOpen)}><strong>{modalProps.buttonText}</strong></button>
+      </dialog>
+    </div>
   )
 }
 

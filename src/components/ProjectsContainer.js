@@ -6,14 +6,14 @@ function ProjectsContainer({styles, projects, setHeroProject}) {
   const [endIndex, setEndIndex] = useState(3)
 
   const handleProgress = () => {
-    if (endIndex !== projects.length){
+    if (endIndex !== projects.length) {
       setStartIndex(startIndex + 1)
       setEndIndex(endIndex + 1)
     }
   }
 
   const handleDegress = () => {
-    if (startIndex !== 0){
+    if (startIndex !== 0) {
       setStartIndex(startIndex - 1)
       setEndIndex(endIndex - 1)
     }
@@ -21,34 +21,38 @@ function ProjectsContainer({styles, projects, setHeroProject}) {
 
   return (
     <div className={styles['projects-carousel']}>
-      Other Projects
+      <p className={styles['project-title']}>Click to View Project</p>
       <div className={styles['projects-tray']}>
         <button
           onClick={handleDegress}
           className={styles['projects-tray-button']}
           disabled={startIndex === 0}
-          >{'<'}
+        >{'<'}
         </button>
         {projects.slice(startIndex, endIndex).map((project, index) => {
+          let shortenedName;
+          if (project.projectName.length > 15) {
+            shortenedName = `${project.projectName.slice(0,16)}...`
+          }
           return (
             <div key={index} className={styles['project-card']} onClick={() => setHeroProject(project)}>
-              <img src={project.images[0].link} alt={project.images[0].description} />
-              {project.projectName}
+              <img src={project.images[0].link} alt={project.images[0].description} className={styles['project-image']} />
+              <p className={styles['project-title']}>{shortenedName ? shortenedName : project.projectName}</p>
             </div>
-        )
+          )
         })}
         <button
           onClick={handleProgress}
           className={styles['projects-tray-button']}
           disabled={endIndex === projects.length}
-          >{'>'}
+        >{'>'}
         </button>
       </div>
     </div>
   )
 }
 
-ProjectsContainer.propTypes= {
+ProjectsContainer.propTypes = {
   styles : PropTypes.object,
   projects : PropTypes.array,
   setHeroProject : PropTypes.func

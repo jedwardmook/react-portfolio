@@ -7,12 +7,12 @@ function Footer() {
       <div></div>
       <p>© Copyright 2023 John E. Mook</p>
       <div>
-      {socialLinks.map((link) => {
-        return (
-          <a key={link.title} href={link.address} rel='noreferrer' target='_blank'><img src={link.icon} alt={link.title} /></a>
-        )
-      })
-      }
+        {socialLinks.map((link) => {
+          return (
+            <a key={link.title} href={link.address} rel='noreferrer' target='_blank'><img src={link.icon} alt={link.title} /></a>
+          )
+        })
+        }
       </div>
     </footer>
   )
