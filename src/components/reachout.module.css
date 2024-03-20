@@ -95,21 +95,15 @@
   cursor: pointer;
   appearance: none;
   background-color: inherit;
+  transition: transform 1s ease-out;
+
+  &:hover {
+    transform: translate(1vw, -.5vw);
+  }
 }
 
 .submit-image {
   width: 17vw;
-  margin-top: 1vw;
-  margin-right: 2vw;
-  align-items: end;
-  transition:
-     margin-top 1s,
-     margin-right 1s;
-}
-
-.submit-image:hover {
-  margin-top: -.5vw;
-  margin-right: -1vw;
 }
 
 .modal-background {
