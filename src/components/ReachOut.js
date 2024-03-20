@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import styles from './reachout.module.css';
 import emailjs from '@emailjs/browser';
-import send from '../icons/send.svg'
+import send from '../icons/send.svg';
 import ReachOutModal from './ReachOutModal';
 
 function ReachOut() {
@@ -18,10 +18,10 @@ function ReachOut() {
     status: '',
     message: '',
     buttonText: 'Okay'
-  })
+  });
 
   const handleForm = (e) => {
-    const {name, value} = e.target
+    const {name, value} = e.target;
     setFormValues({
       ...formValues,
       [name]: value,
@@ -29,7 +29,7 @@ function ReachOut() {
   };
 
   const sendEmail =  async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     let status;
     let message;
@@ -46,12 +46,12 @@ function ReachOut() {
           form.current, {
             publicKey: '1FRD8OfceVnIcjUZK',
           }
-        )
+        );
 
         status = 'Success!';
         message = 'Thank you. Your email has been sent.';
 
-        setIsOpen(!isOpen)
+        setIsOpen(!isOpen);
         setFormValues({
           contactName: '',
           contactEmail: '',
@@ -73,8 +73,8 @@ function ReachOut() {
       ...modalProps,
       status,
       message,
-    })
-  }
+    });
+  };
 
   return (
     <section className={styles['reach-out']}>
@@ -145,7 +145,7 @@ function ReachOut() {
         document.getElementById('modal-root')
       )}
     </section>
-  )
+  );
 }
 
-export default ReachOut
+export default ReachOut;

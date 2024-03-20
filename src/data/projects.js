@@ -1,24 +1,24 @@
-import scc_main from '../images/spot_check_chicago/SCC-main.jpg'
-import scc_home from '../images/spot_check_chicago/SCC-home.jpg'
-import scc_spot_page from '../images/spot_check_chicago/SCC-spot_page.jpg'
-import scc_reviews from '../images/spot_check_chicago/SCC-reviews.jpg'
-import scc_addspot from '../images/spot_check_chicago/SCC-addspot.jpg'
-import hbnb_main from '../images/heir_bnb/HBNB-main.jpg'
-import hbnb_home from '../images/heir_bnb/HBNB-home.jpg'
-import hbnb_location from '../images/heir_bnb/HBNB-location.jpg'
-import hbnb_profile from '../images/heir_bnb/HBNB-profile.jpg'
-import hbnb_edit_profile from '../images/heir_bnb/HBNB-editprofile.jpg'
-import flw_main from '../images/4lw_notes/4LW-main.jpg'
-import flw_home from '../images/4lw_notes/4LW-home.jpg'
-import flw_note from '../images/4lw_notes/4LW-note.jpg'
-import flw_employee from '../images/4lw_notes/4LW-employee.jpg'
-import sc_main from '../images/spot_check_v1/SC-main.jpg'
-import sc_home from '../images/spot_check_v1/SC-home.jpg'
-import sc_spot from '../images/spot_check_v1/SC-spot.jpg'
-import sc_add from '../images/spot_check_v1/SC-add.jpg'
-import src_home from '../images/src/SRC-home.jpg'
-import src_add from '../images/src/SRC-add.jpg'
-import src_search from '../images/src/SRC-search.jpg'
+import scc_main from '../images/spot_check_chicago/SCC-main.jpg';
+import scc_home from '../images/spot_check_chicago/SCC-home.jpg';
+import scc_spot_page from '../images/spot_check_chicago/SCC-spot_page.jpg';
+import scc_reviews from '../images/spot_check_chicago/SCC-reviews.jpg';
+import scc_addspot from '../images/spot_check_chicago/SCC-addspot.jpg';
+import hbnb_main from '../images/heir_bnb/HBNB-main.jpg';
+import hbnb_home from '../images/heir_bnb/HBNB-home.jpg';
+import hbnb_location from '../images/heir_bnb/HBNB-location.jpg';
+import hbnb_profile from '../images/heir_bnb/HBNB-profile.jpg';
+import hbnb_edit_profile from '../images/heir_bnb/HBNB-editprofile.jpg';
+import flw_main from '../images/4lw_notes/4LW-main.jpg';
+import flw_home from '../images/4lw_notes/4LW-home.jpg';
+import flw_note from '../images/4lw_notes/4LW-note.jpg';
+import flw_employee from '../images/4lw_notes/4LW-employee.jpg';
+import sc_main from '../images/spot_check_v1/SC-main.jpg';
+import sc_home from '../images/spot_check_v1/SC-home.jpg';
+import sc_spot from '../images/spot_check_v1/SC-spot.jpg';
+import sc_add from '../images/spot_check_v1/SC-add.jpg';
+import src_home from '../images/src/SRC-home.jpg';
+import src_add from '../images/src/SRC-add.jpg';
+import src_search from '../images/src/SRC-search.jpg';
 
 
 const projects = [
@@ -195,6 +195,6 @@ const projects = [
       },
     ]
   }
-]
+];
 
 export default projects;

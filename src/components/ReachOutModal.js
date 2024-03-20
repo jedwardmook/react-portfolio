@@ -12,7 +12,7 @@ function ReachOutModal({isOpen, setIsOpen, modalProps, styles}) {
         <button className={styles['modal-button']} onClick={() => setIsOpen(!isOpen)}><strong>{modalProps.buttonText}</strong></button>
       </dialog>
     </div>
-  )
+  );
 }
 
 ReachOutModal.propTypes = {
@@ -20,6 +20,6 @@ ReachOutModal.propTypes = {
   setIsOpen: PropTypes.func,
   modalProps: PropTypes.object,
   styles: PropTypes.object
-}
+};
 
-export default ReachOutModal
+export default ReachOutModal;

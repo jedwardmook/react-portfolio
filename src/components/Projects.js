@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import HeroProjectContainer from './HeroProjectContainer'
-import styles from './projects.module.css'
-import projects from '../data/projects.js'
-import ProjectsContainer from './ProjectsContainer.js'
+import { useState } from 'react';
+import HeroProjectContainer from './HeroProjectContainer';
+import styles from './projects.module.css';
+import projects from '../data/projects.js';
+import ProjectsContainer from './ProjectsContainer.js';
 
 
 function Projects() {
-  const [heroProject, setHeroProject] = useState(projects[0])
+  const [heroProject, setHeroProject] = useState(projects[0]);
 
   return (
     <section id='projects' className={styles.projects}>
@@ -23,7 +23,7 @@ function Projects() {
         />
       </div>
     </section>
-  )
+  );
 }
 
-export default Projects
+export default Projects;

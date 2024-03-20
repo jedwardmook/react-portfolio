@@ -1,26 +1,26 @@
 import PropTypes from 'prop-types';
 import { createPortal } from 'react-dom';
-import { useState } from 'react'
+import { useState } from 'react';
 import ProjectImagesViewer from './ProjectImagesViewer';
 
 function HeroProjectContainer({styles, heroProject}) {
-  const {projectName, images, technologiesUsed, links, description} = heroProject
+  const {projectName, images, technologiesUsed, links, description} = heroProject;
   const [isViewerOpen, setIsViewerOpen] = useState(false);
 
   const tech = technologiesUsed.map((tech, index) => {
     if (index !== technologiesUsed.length - 1)
-      return `${tech},`
+      return `${tech},`;
     else
-      return `${tech}`
-  })
+      return `${tech}`;
+  });
 
   const link = links.map((obj, index) => {
     return (
       <p className={styles['hero-project-value']} key={index}>
         <a className={styles['hero-project-value-link']} href={obj.link} rel='noreferrer' target='_blank'>{obj.type}</a>
       </p>
-    )
-  })
+    );
+  });
 
   return (
     <div className={styles['hero-project-container']}>
@@ -44,12 +44,12 @@ function HeroProjectContainer({styles, heroProject}) {
         document.getElementById('modal-root')
       )}
     </div>
-  )
+  );
 }
 
 HeroProjectContainer.propTypes = {
   styles: PropTypes.object,
   heroProject: PropTypes.object.isRequired,
-}
+};
 
-export default HeroProjectContainer
+export default HeroProjectContainer;

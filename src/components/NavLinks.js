@@ -9,12 +9,12 @@ function NavLinks({navLinks, linksStyle, handleOpen, styles}) {
           navLinks.map((link, index) => {
             return (
               <li key={index}><a className={styles['nav-link']} href={`#${link.toLowerCase()}`}>{link}</a></li>
-            )
+            );
           })
         }
       </ul>
     </nav>
-  )
+  );
 }
 
 NavLinks.propTypes = {
@@ -24,5 +24,5 @@ NavLinks.propTypes = {
   styles: PropTypes.object
 };
 
-export default NavLinks
+export default NavLinks;
 

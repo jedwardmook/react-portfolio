@@ -1,16 +1,16 @@
 import styles from './header.module.css';
-import NavLinks from './NavLinks'
-import menu from '../icons/menu.svg'
-import close from '../icons/close.svg'
+import NavLinks from './NavLinks';
+import menu from '../icons/menu.svg';
+import close from '../icons/close.svg';
 import { useState } from 'react';
 
 
 function Header() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   const navLinks = [
     "Home",
@@ -40,7 +40,7 @@ function Header() {
       </div>
       }
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

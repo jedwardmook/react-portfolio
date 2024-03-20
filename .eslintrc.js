@@ -16,7 +16,7 @@ module.exports = {
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
-    "semi-style": process.env.NODE_ENV === 'production' ? 2 : 1,
+    "semi": "error",
     "no-debugger": process.env.NODE_ENV === 'production' ? 2 : 1,
     "no-console": process.env.NODE_ENV === 'production' ? 2 : 1,
     "no-unused-vars": process.env.NODE_ENV === 'production' ? 2 : 1,
@@ -37,4 +37,4 @@ module.exports = {
       "version": "detect"
     }
   }
-}
+};

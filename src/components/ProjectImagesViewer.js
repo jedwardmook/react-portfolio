@@ -6,7 +6,7 @@ function ProjectImagesViewer({ styles, images, isViewerOpen, setIsViewerOpen }) 
   const [heroImage, setHeroImage] = useState();
 
   useEffect(() => {
-    setHeroImage(images[0])
+    setHeroImage(images[0]);
   }, [images]);
 
   if (!isViewerOpen) return null;
@@ -23,12 +23,12 @@ function ProjectImagesViewer({ styles, images, isViewerOpen, setIsViewerOpen }) 
         </div>
         <div className={styles['image-viewer-tray']}>
           {images.map((image) => {
-            return <img key={image.description} alt={image.description} src={image.link} className={styles['image-viewer-tray-image']} onClick={() => setHeroImage(image)}/>
+            return <img key={image.description} alt={image.description} src={image.link} className={styles['image-viewer-tray-image']} onClick={() => setHeroImage(image)}/>;
           })}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 ProjectImagesViewer.propTypes = {

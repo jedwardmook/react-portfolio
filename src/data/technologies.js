@@ -1,11 +1,11 @@
 import javascript from '../icons/javascript.svg';
-import css from '../icons/css.svg'
-import html from '../icons/html.svg'
-import typescript from '../icons/typescript.svg'
-import react from '../icons/react.svg'
-import sass from '../icons/sass.svg'
-import ruby from '../icons/ruby.svg'
-import rails from '../icons/rails.svg'
+import css from '../icons/css.svg';
+import html from '../icons/html.svg';
+import typescript from '../icons/typescript.svg';
+import react from '../icons/react.svg';
+import sass from '../icons/sass.svg';
+import ruby from '../icons/ruby.svg';
+import rails from '../icons/rails.svg';
 
 const technologiesArr = [
   {
@@ -48,6 +48,6 @@ const technologiesArr = [
     link: "https://rubyonrails.org/",
     icon: rails
   }
-]
+];
 
 export default technologiesArr;
