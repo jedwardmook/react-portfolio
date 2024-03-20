@@ -70,36 +70,36 @@ span {
   margin-right: 1.75rem;
   filter: var(--dropshadow);
   padding-bottom: 10vw;
+}
 
-  .socials-container {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    transform: skewX(3deg);
-    margin-left: -1rem;
+.socials-container {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  transform: skewX(3deg);
+  margin-left: -1rem;
+}
 
-    a {
-      font-family: var(--condensedblack-family);
-      font-size: 4vw;
-      color: black;
-      background-color: var(--peach-color);
-      transform: skewX(-3deg);
-      padding: .75vw 4vw;
-      outline: 1px solid black;
-      margin-top: .75rem;
-      text-decoration: none;
-    }
-  }
+.socials-link {
+  font-family: var(--condensedblack-family);
+  font-size: 4vw;
+  color: black;
+  background-color: var(--peach-color);
+  transform: skewX(-3deg);
+  padding: .75vw 4vw;
+  outline: 1px solid black;
+  margin-top: .75rem;
+  text-decoration: none;
+}
 
-  .reachout-button {
-    background-color: var(--purple-color);
-    border-radius: 100px;
-    color: black;
-    border: none;
-    font-family: var(--condensedblack-family);
-    font-size: 3vw;
-    padding: 2vw 3vw;
-    cursor: pointer;
-    text-decoration: none;
-  }
+.reachout-button {
+  background-color: var(--purple-color);
+  border-radius: 100px;
+  color: black;
+  border: none;
+  font-family: var(--condensedblack-family);
+  font-size: 3vw;
+  padding: 2vw 3vw;
+  cursor: pointer;
+  text-decoration: none;
 }

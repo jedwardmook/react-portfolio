@@ -19,7 +19,8 @@
     "eject": "react-scripts eject",
     "lint:css": "stylelint '**/*.css'",
     "lint:css:fix": "stylelint '**/*.css' --fix",
-    "lint": "eslint . --ext .js"
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix"
   },
   "eslintConfig": {
     "extends": [

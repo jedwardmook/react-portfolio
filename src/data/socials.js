@@ -1,6 +1,6 @@
-import github from '../icons/git.svg'
-import linkedin from '../icons/linkedin.svg'
-import medium from '../icons/medium.svg'
+import github from '../icons/git.svg';
+import linkedin from '../icons/linkedin.svg';
+import medium from '../icons/medium.svg';
 
 const socialLinks = [
   {
@@ -21,6 +21,6 @@ const socialLinks = [
     type: "medium",
     icon: medium
   }
-]
+];
 
 export default socialLinks;

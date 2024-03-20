@@ -1,16 +1,16 @@
 import styles from './header.module.css';
-import NavLinks from './NavLinks'
-import menu from '../icons/menu.svg'
-import close from '../icons/close.svg'
+import NavLinks from './NavLinks';
+import menu from '../icons/menu.svg';
+import close from '../icons/close.svg';
 import { useState } from 'react';
 
 
 function Header() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   const navLinks = [
     "Home",
@@ -24,21 +24,23 @@ function Header() {
         <h2><a className={styles.logo} href='#home'>John E Mook</a></h2>
         <NavLinks
           navLinks={navLinks}
-          style={styles.nav}
+          linksStyle={styles.nav}
+          styles={styles}
         />
-        <button onClick={handleOpen} className={styles['nav-button']}><img src={isOpen? close : menu}/></button>
+        <button onClick={handleOpen} className={styles['nav-button']}><img src={isOpen ? close : menu}/></button>
       </div>
-      {isOpen&&
+      {isOpen &&
       <div className={styles['mobile-active']}>
         <NavLinks
           navLinks={navLinks}
-          style={isOpen? styles['mobile-open'] : styles['mobile-closed']}
+          linksStyle={isOpen ? styles['mobile-open'] : styles['mobile-closed']}
           handleOpen={handleOpen}
+          styles={styles}
         />
       </div>
       }
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
