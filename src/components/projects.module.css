@@ -72,6 +72,11 @@
 .project-title {
   margin: 0;
   font-size: 2vw;
+  text-align: center;
+  width: calc(100% - .5rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .hero-project-container {

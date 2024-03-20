@@ -2,22 +2,22 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 function ProjectsContainer({styles, projects, setHeroProject}) {
-  const [startIndex, setStartIndex] = useState(0)
-  const [endIndex, setEndIndex] = useState(3)
+  const [startIndex, setStartIndex] = useState(0);
+  const [endIndex, setEndIndex] = useState(3);
 
   const handleProgress = () => {
     if (endIndex !== projects.length) {
-      setStartIndex(startIndex + 1)
-      setEndIndex(endIndex + 1)
+      setStartIndex(startIndex + 1);
+      setEndIndex(endIndex + 1);
     }
-  }
+  };
 
   const handleDegress = () => {
     if (startIndex !== 0) {
-      setStartIndex(startIndex - 1)
-      setEndIndex(endIndex - 1)
+      setStartIndex(startIndex - 1);
+      setEndIndex(endIndex - 1);
     }
-  }
+  };
 
   return (
     <div className={styles['projects-carousel']}>
@@ -30,16 +30,12 @@ function ProjectsContainer({styles, projects, setHeroProject}) {
         >{'<'}
         </button>
         {projects.slice(startIndex, endIndex).map((project, index) => {
-          let shortenedName;
-          if (project.projectName.length > 15) {
-            shortenedName = `${project.projectName.slice(0,16)}...`
-          }
           return (
             <div key={index} className={styles['project-card']} onClick={() => setHeroProject(project)}>
               <img src={project.images[0].link} alt={project.images[0].description} className={styles['project-image']} />
-              <p className={styles['project-title']}>{shortenedName ? shortenedName : project.projectName}</p>
+              <p className={styles['project-title']}>{project.projectName}</p>
             </div>
-          )
+          );
         })}
         <button
           onClick={handleProgress}
@@ -49,13 +45,13 @@ function ProjectsContainer({styles, projects, setHeroProject}) {
         </button>
       </div>
     </div>
-  )
+  );
 }
 
 ProjectsContainer.propTypes = {
   styles : PropTypes.object,
   projects : PropTypes.array,
   setHeroProject : PropTypes.func
-}
+};
 
-export default ProjectsContainer
+export default ProjectsContainer;
