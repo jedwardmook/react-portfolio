@@ -9,7 +9,9 @@ function Footer() {
       <div>
         {socialLinks.map((link) => {
           return (
-            <a key={link.title} href={link.address} rel='noreferrer' target='_blank'><img src={link.icon} alt={link.title} /></a>
+            <a key={link.title} href={link.address} rel='noreferrer' target='_blank'>
+              <img src={link.icon} alt={link.title} />
+            </a>
           )
         })
         }

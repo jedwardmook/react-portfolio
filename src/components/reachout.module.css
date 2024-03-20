@@ -16,96 +16,100 @@
   font-family: var(--condensedblack-family);
   margin-bottom: 3vw;
   filter: var(--dropshadow);
+}
 
-  .reach-out-info {
-    transform: skew(10deg, -5deg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.reach-out-info {
+  transform: skew(10deg, -5deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    h2 {
-      color: white;
-      text-align: center;
-      -webkit-text-stroke: 2px black;
-      font-size: 13vw;
-      margin-bottom: 0;
-      margin-top: 10vw;
-    }
+.reach-out-header {
+  color: white;
+  text-align: center;
+  -webkit-text-stroke: 2px black;
+  font-size: 13vw;
+  margin-bottom: 0;
+  margin-top: 10vw;
+}
 
-    form {
-      width: 60vw;
-      font-size: 2vw;
-      margin-bottom: 17vw;
-    }
+.reach-out-form {
+  width: 60vw;
+  font-size: 2vw;
+  margin-bottom: 17vw;
+}
 
-    div {
-      display: flex;
-      justify-content: space-between;
-    }
+.reach-out-two-input {
+  display: flex;
+  justify-content: space-between;
+}
 
-    .form-stacked-container {
-      display: flex;
-      flex-direction: column;
-      font-size: 2.25vw;
-    }
+.form-stacked-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.25vw;
+}
 
-    label {
-      margin-bottom: 1vw;
-    }
+.form-meeting-container {
+  display: flex;
+}
 
-    input, textarea {
-      background-color: var(--yellow-color);
-      border: 2px solid black;
-      padding: .5vw;
-      margin-bottom: 2vw;
-      font-family: var(--neue-family);
-      font-size: 2vw;
-    }
+.form-label {
+  margin-bottom: 1vw;
+}
 
-    input {
-      height: 3.5vw;
-      width: auto;
-    }
+.long-input, .small-input, .form-textarea {
+  background-color: var(--yellow-color);
+  border: 2px solid black;
+  padding: .5vw;
+  margin-bottom: 2vw;
+  font-family: var(--neue-family);
+  font-size: 2vw;
+}
 
-    .small-input {
-      width: 28vw;
-    }
+.long-input {
+  height: 3.5vw;
+  width: auto;
+}
 
-    textarea {
-      height: 8vw;;
-    }
+.small-input {
+  width: 28vw;
+}
 
-    p, a {
-      margin-top: -1vw;
-      font-size: 1.85vw;
-    }
+.form-textarea {
+  height: 8vw;;
+}
 
-    a {
-      color: white;
-    }
+.form-meeting-message, .form-meeting-link {
+  margin-top: -1vw;
+  font-size: 1.85vw;
+}
 
-    .submit-button {
-      border: none;
-      cursor: pointer;
-      appearance: none;
-      background-color: inherit;
-    }
+.form-meeting-link {
+  color: white;
+}
 
-    img {
-      width: 17vw;
-      margin-top: 1vw;
-      margin-right: 2vw;
-      align-items: end;
-      transition:
-         margin-top 1s,
-         margin-right 1s;
-    }
+.submit-button {
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+}
 
-    img:hover {
-      margin-top: -.5vw;
-      margin-right: -1vw;
-    }
-  }
+.submit-image {
+  width: 17vw;
+  margin-top: 1vw;
+  margin-right: 2vw;
+  align-items: end;
+  transition:
+     margin-top 1s,
+     margin-right 1s;
+}
+
+.submit-image:hover {
+  margin-top: -.5vw;
+  margin-right: -1vw;
 }
 
 .modal-background {
@@ -119,29 +123,29 @@
   justify-content: center;
   align-items: center;
   z-index: 5;
+}
 
-  .modal-dialog {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--neue-family);
-    height: 15vw;
-    border: 2px solid black;
-    filter: var(--dropshadow);
+.modal-header {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-    h3 {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  }
+.modal-dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--neue-family);
+  height: 15vw;
+  border: 2px solid black;
+  filter: var(--dropshadow);
+}
 
-  .modal-button {
-    border: none;
-    border-radius: 2vw;
-    background-color: var(--purple-color);
-    filter: var(--dropshadow);
-    padding: 1vw 2vw;
-    margin-top: 1vw;
-  }
+.modal-button {
+  border: none;
+  border-radius: 2vw;
+  background-color: var(--purple-color);
+  filter: var(--dropshadow);
+  padding: 1vw 2vw;
+  margin-top: 1vw;
 }

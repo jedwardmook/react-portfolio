@@ -15,7 +15,11 @@ function HeroProjectContainer({styles, heroProject}) {
   })
 
   const link = links.map((obj, index) => {
-    return <p className={styles['hero-project-value']} key={index}><a className={styles['hero-project-value-link']} href={obj.link} rel='noreferrer' target='_blank'>{obj.type}</a></p>
+    return (
+      <p className={styles['hero-project-value']} key={index}>
+        <a className={styles['hero-project-value-link']} href={obj.link} rel='noreferrer' target='_blank'>{obj.type}</a>
+      </p>
+    )
   })
 
   return (

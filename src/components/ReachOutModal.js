@@ -7,7 +7,7 @@ function ReachOutModal({isOpen, setIsOpen, modalProps, styles}) {
   return (
     <div className={styles['modal-background']}>
       <dialog className={styles['modal-dialog']} open={isOpen}>
-        <h3>{modalProps.status}</h3>
+        <h3 className={styles['modal-header']}>{modalProps.status}</h3>
         <p>{modalProps.message}</p>
         <button className={styles['modal-button']} onClick={() => setIsOpen(!isOpen)}><strong>{modalProps.buttonText}</strong></button>
       </dialog>

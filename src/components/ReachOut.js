@@ -80,11 +80,11 @@ function ReachOut() {
     <section className={styles['reach-out']}>
       <div id='contact' className={styles['reach-out-container']}>
         <div className={styles['reach-out-info']}>
-          <h2>REACH OUT!</h2>
-          <form ref={form} onSubmit={sendEmail}>
-            <div>
+          <h2 className={styles['reach-out-header']}>REACH OUT!</h2>
+          <form className={styles['reach-out-form']} ref={form} onSubmit={sendEmail}>
+            <div className={styles['reach-out-two-input']}>
               <div className={styles['form-stacked-container']}>
-                <label htmlFor='contactName'>Name:</label>
+                <label className={styles['form-label']} htmlFor='contactName'>Name:</label>
                 <input
                   type='text'
                   name='contactName'
@@ -95,7 +95,7 @@ function ReachOut() {
                 />
               </div>
               <div className={styles['form-stacked-container']}>
-                <label htmlFor='contactEmail'>Email:</label>
+                <label className={styles['form-label']} htmlFor='contactEmail'>Email:</label>
                 <input
                   type='email'
                   name='contactEmail'
@@ -107,28 +107,30 @@ function ReachOut() {
               </div>
             </div>
             <div className={styles['form-stacked-container']}>
-              <label htmlFor='messageSubject'>Subject:</label>
+              <label className={styles['form-label']} htmlFor='messageSubject'>Subject:</label>
               <input
                 type='text'
                 name='messageSubject'
                 value={formValues.messageSubject}
                 onChange={handleForm}
                 placeholder='Subject'
+                className={styles['long-input']}
               />
             </div>
             <div className={styles['form-stacked-container']}>
-              <label htmlFor='messageBody'>Body:</label>
+              <label className={styles['form-label']} htmlFor='messageBody'>Body:</label>
               <textarea
                 type='text'
                 name='messageBody'
                 value={formValues.messageBody}
                 onChange={handleForm}
                 placeholder='Message'
+                className={styles['form-textarea']}
               />
             </div>
-            <div>
-              <p>Send a message or schedule a meeting: <a href='https://calendly.com/jedwardmook'>Calendly</a>.</p>
-              <button type='submit' className={styles['submit-button']}><img src={send} alt='Send your message'/></button>
+            <div className={styles['form-meeting-container']}>
+              <p className={styles['form-meeting-message']}>Send a message or schedule a meeting: <a className={styles['form-meeting-link']} href='https://calendly.com/jedwardmook'>Calendly</a>.</p>
+              <button type='submit' className={styles['submit-button']}><img className={styles['submit-image']} src={send} alt='Send your message'/></button>
             </div>
           </form>
         </div>
