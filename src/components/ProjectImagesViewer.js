@@ -19,7 +19,7 @@ function ProjectImagesViewer({ styles, images, isViewerOpen, setIsViewerOpen }) 
         </div>
         <div className={styles['image-viewer-hero-container']}>
           <img className={styles['image-viewer-hero-image']} src={heroImage.link} alt={heroImage.description}/>
-          <p>{heroImage.description}</p>
+          <p className={styles['image-viewer-hero-description']}>{heroImage.description}</p>
         </div>
         <div className={styles['image-viewer-tray']}>
           {images.map((image) => {

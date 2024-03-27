@@ -122,6 +122,7 @@
   margin-left: .5vw;
   margin-right: 2vw;
   font-size: 2vw;
+  margin-bottom: -.75vw;
 }
 
 .hero-project-value-link {
@@ -179,12 +180,55 @@
   width: 60vw;
 }
 
+.image-viewer-hero-description {
+  font-size: 1.75vw;
+  font-family: var(--neue-family);
+}
+
 .image-viewer-tray {
   width: 60vw;
   justify-content: space-around;
+  margin-bottom: 2vw;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .image-viewer-tray-image {
-  width: 10vw;
-  margin-bottom: 2vw;
+  width: 12vw;
+  padding: 1vw 0;
+  cursor: pointer;
+}
+
+@media (width >= 900px) {
+  .hero-project-container {
+    flex-direction: row;
+    gap: 1vw;
+    margin-bottom: 2vw;
+    margin-left: 1.75vw;
+  }
+
+  .hero-project-image {
+    width: 45vw;
+    transform: skew(0deg, 0deg);
+  }
+
+  .hero-project-key {
+    font-size: 2vw;
+    margin-bottom: -1.5vw;
+  }
+
+  .hero-project-value {
+    margin-left: .25vw;
+    margin-right: 1.75vw;
+    font-size: 1.75vw;
+  }
+
+  .hero-project-value-link {
+    font-size: 1.75vw;
+    color: black;
+  }
+
+  .projects-title {
+    margin-bottom: -3vw;
+  }
 }
