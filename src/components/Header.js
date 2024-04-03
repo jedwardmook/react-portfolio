@@ -27,7 +27,7 @@ function Header() {
           linksStyle={styles.nav}
           styles={styles}
         />
-        <button onClick={handleOpen} className={styles['nav-button']}><img src={isOpen ? close : menu}/></button>
+        <button onClick={handleOpen} className={styles['nav-button']}><img className={styles['nav-button-image']} src={isOpen ? close : menu}/></button>
       </div>
       {isOpen &&
       <div className={styles['mobile-active']}>

@@ -9,6 +9,10 @@ header {
   text-decoration: none;
   -webkit-text-stroke: 1px black;
   filter: var(--dropshadow);
+
+  @media (width <= 590px){
+    font-size: 1.25rem;
+  }
 }
 
 .header-container {
@@ -19,21 +23,48 @@ header {
   height: 4rem;
   padding: 0 2rem;
   filter: var(--dropshadow);
+
+  @media (width <= 600px) {
+    height: 2.5rem;
+  }
 }
 
 .logo {
   font-size: 2rem;
   font-family: var(--neue-family);
+
+  @media (width <= 590px){
+    font-size: 1.5rem;
+  }
 }
 
 .nav-button {
   display: none;
+
+  @media (width <= 590px){
+    display: flex;
+    background-color: transparent;
+    border: none;
+    border-radius: 25%;
+    cursor: pointer;
+    filter: var(--dropshadow);
+    margin-right: -.75rem;
+  }
+}
+
+.nav-button-image {
+  width: 2.25rem;
+  height: 2.25rem;
 }
 
 .nav {
   display: flex;
   gap: 1rem;
   list-style-type: none;
+
+  @media (width <= 590px){
+    display: none;
+  }
 }
 
 .mobile-closed {
@@ -42,41 +73,18 @@ header {
 
 .mobile-open {
   display: none;
-}
 
-.mobile-active {
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
-@media (width <= 590px){
-  .nav {
-    display: none;
-  }
-
-  .nav-button {
-    display: flex;
-    background-color: transparent;
-    border: none;
-    border-radius: 25%;
-    width: 3.75rem;
-    height: 3.75rem;
-    cursor: pointer;
-    padding-top: .35rem;
-    margin-right: -1rem;
-    filter: var(--dropshadow);
-  }
-
-  .mobile-open {
+  @media (width <= 590px){
     display: block;
     list-style-type: none;
     text-align: right;
     padding-right: 1.75rem;
     margin-top: 0;
   }
+}
 
-  .nav-link, .logo {
-    font-size: 1.5rem;
-  }
+.mobile-active {
+  position: absolute;
+  left: 0;
+  right: 0;
 }
