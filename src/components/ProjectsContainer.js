@@ -19,10 +19,6 @@ function ProjectsContainer({styles, projects, setHeroProject}) {
     }
   };
 
-  const handleHeroProject = (project) => {
-    setHeroProject(project);
-  };
-
   return (
     <div className={styles['projects-carousel']}>
       <p className={styles['project-title']}>Click to View Project</p>
@@ -35,7 +31,7 @@ function ProjectsContainer({styles, projects, setHeroProject}) {
         </button>
         {projects.slice(startIndex, endIndex).map((project, index) => {
           return (
-            <div key={index} className={styles['project-card']} onClick={() => handleHeroProject(project)}>
+            <div key={index} className={styles['project-card']} onClick={() => setHeroProject(project)}>
               <a href="#projects"><img src={project.images[0].link} alt={project.images[0].description} className={styles['project-image']} /></a>
               <p className={styles['project-title']}>{project.projectName}</p>
             </div>
