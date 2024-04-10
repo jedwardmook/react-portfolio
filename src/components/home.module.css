@@ -30,47 +30,47 @@
 .hello {
   font-family: var(--condensedblack-family);
   color: white;
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 0 1rem;
   margin-top: -.25rem;
   transform: skew(-3deg, 0deg);
 
-  @media (width <= 670px) {
+  @media (width >= 590px){
     font-size: 1.5rem;
   }
 
-  @media (width <= 590px){
-    font-size: 1rem;
+  @media (width >= 670px) {
+    font-size: 2rem;
   }
 }
 
 span {
   font-family: var(--neue-family);
-  font-size: 2.5rem;
+  font-size: 1.35rem;
   color: var(--peach-color);
   -webkit-text-stroke: 1px black;
 
-  @media (width <= 670px) {
+  @media (width >= 590px){
     font-size: 2rem;
   }
 
-  @media (width <= 590px){
-    font-size: 1.35rem;
+  @media (width >= 670px) {
+    font-size: 2.5rem;
   }
 }
 
 .about {
   font-family: var(--neue-family);
   color: white;
-  font-size: 1.5rem;
+  font-size: .75rem;
   padding-top: 3vw;
 
-  @media (width <= 670px) {
+  @media (width >= 590px){
     font-size: 1rem;
   }
 
-  @media (width <= 590px){
-    font-size: .75rem;
+  @media (width >= 670px) {
+    font-size: 1.5rem;
   }
 }
 
@@ -106,7 +106,7 @@ span {
 
 .socials-link {
   font-family: var(--condensedblack-family);
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: black;
   background-color: var(--peach-color);
   transform: skewX(-3deg);
@@ -115,8 +115,8 @@ span {
   margin-top: .75rem;
   text-decoration: none;
 
-  @media (width <= 670px) {
-    font-size: 1rem;
+  @media (width >= 670px) {
+    font-size: 1.5rem;
   }
 }
 
@@ -126,12 +126,12 @@ span {
   color: black;
   border: none;
   font-family: var(--condensedblack-family);
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 2vw 3vw;
   cursor: pointer;
   text-decoration: none;
 
-  @media (width <= 670px) {
-    font-size: 1rem;
+  @media (width >= 670px) {
+    font-size: 1.5rem;
   }
 }
