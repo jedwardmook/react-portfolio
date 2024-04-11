@@ -5,6 +5,7 @@ footer {
   background-color: var(--peach-color);
   font-family: var(--neue-family);
   color: white;
+  max-width: var(--max-width);
 
   p {
     font-size: 2vw;

@@ -6,6 +6,7 @@
   justify-content: center;
   position: inherit;
   z-index: -1;
+  max-width: var(--max-width);
 }
 
 .reach-out-container {
@@ -16,6 +17,7 @@
   font-family: var(--condensedblack-family);
   margin-bottom: 3vw;
   filter: var(--dropshadow);
+  max-width: 1000px;
 }
 
 .reach-out-info {

@@ -13,4 +13,6 @@
   --condensedblack-family: helveticaneue-condensedblack, helvetica, sans-serif;
 
   scroll-behavior: smooth;
+
+  --max-width: 1200px;
 }

@@ -1,5 +1,6 @@
 header {
   z-index: 2;
+  max-width: var(--max-width);
 }
 
 .nav-link, .logo {
@@ -25,7 +26,7 @@ header {
   filter: var(--dropshadow);
 
   @media (width >= 600px) {
-    height: 4rem;
+    height: 3rem;
   }
 }
 
