@@ -6,14 +6,28 @@ footer {
   font-family: var(--neue-family);
   color: white;
   max-width: var(--max-width);
+  margin: var(--centered);
+  height: 2rem;
 
-  p {
-    font-size: 2vw;
+  @media (width >= 600px) {
+    height: 3rem;
   }
+}
 
-  img {
-    width: 3vw;
-    cursor: pointer;
-    margin-left: 1vw;
+.footer-text {
+  font-size: .75rem;
+
+  @media (width >= 600px) {
+    font-size: 1rem;
+  }
+}
+
+.footer-image {
+  width: 1.25rem;
+  cursor: pointer;
+  margin-left: 1vw;
+
+  @media (width >= 600px) {
+    width: 2rem;
   }
 }

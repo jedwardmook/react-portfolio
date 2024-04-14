@@ -8,6 +8,7 @@
   background-color: var(--yellow-color);
   z-index: -1;
   max-width: var(--max-width);
+  margin: var(--centered);
 }
 
 .me {
@@ -79,12 +80,18 @@ span {
 .bio-container {
   margin: 2.5rem 1rem 1rem;
   transform: skew(-3deg, -12deg);
+
+  @media (width >= 670px){
+    .languagelink {
+      width: 2.5rem;
+    }
+  }
 }
 
 .languagelink {
-  width: 5vw;
+  width: 1.5rem;
   height: auto;
-  margin: 0 .75vw 0 0;
+  margin: 0 .5rem 0 0;
   cursor: pointer;
 }
 
@@ -129,11 +136,19 @@ span {
   border: none;
   font-family: var(--condensedblack-family);
   font-size: 1rem;
-  padding: 2vw 3vw;
+  padding: .75rem 1.5rem;
   cursor: pointer;
   text-decoration: none;
 
   @media (width >= 670px) {
+    font-size: 1.25rem;
+    padding: 1.25rem 2rem;
+    margin-right: 2rem;
+  }
+
+  @media (width >= 1000px) {
     font-size: 1.5rem;
+    padding: 1.5rem 2.5rem;
+    margin-right: 5rem;
   }
 }

@@ -7,6 +7,7 @@
   position: inherit;
   z-index: -1;
   max-width: var(--max-width);
+  margin: var(--centered);
 }
 
 .reach-out-container {
@@ -17,7 +18,7 @@
   font-family: var(--condensedblack-family);
   margin-bottom: 3vw;
   filter: var(--dropshadow);
-  max-width: 1000px;
+  max-width: 950px;
 }
 
 .reach-out-info {
@@ -40,7 +41,7 @@
   }
 
   @media (width >= 900px) {
-    font-size: 8rem;
+    font-size: 8.25rem;
   }
 }
 
@@ -55,12 +56,14 @@
 
   @media (width >= 900px) {
     font-size: 2rem;
+    width: 690px;
   }
 }
 
 .reach-out-two-input {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .form-stacked-container {
@@ -75,6 +78,7 @@
 
 .form-meeting-container {
   display: flex;
+  justify-content: space-between;
 }
 
 .form-label {
@@ -100,7 +104,11 @@
 }
 
 .small-input {
-  width: 28vw;
+  width: 25vw;
+
+  @media (width >= 600px) {
+    max-width: 320px;
+  }
 }
 
 .form-textarea {
@@ -109,7 +117,7 @@
 
 .form-meeting-message, .form-meeting-link {
   margin-top: -1vw;
-  font-size: .55rem;
+  font-size: .65rem;
 
   @media (width >= 600px) {
     font-size: 1rem;
@@ -134,6 +142,7 @@
 
 .submit-image {
   width: 17vw;
+  max-width: 200px;
 }
 
 .modal-background {

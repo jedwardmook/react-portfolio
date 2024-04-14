@@ -14,5 +14,7 @@
 
   scroll-behavior: smooth;
 
+  /* formatting */
   --max-width: 1200px;
+  --centered: 0 auto;
 }
