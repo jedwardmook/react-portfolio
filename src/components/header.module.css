@@ -80,7 +80,7 @@ header {
   padding-right: 1.75rem;
   margin-top: 0;
 
-  @media (width <= 590px){
+  @media (width >= 590px){
     display: none;
   }
 }
