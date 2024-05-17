@@ -6,6 +6,8 @@
   justify-content: center;
   position: inherit;
   z-index: -1;
+  max-width: var(--max-width);
+  margin: var(--centered);
 }
 
 .reach-out-container {
@@ -16,6 +18,7 @@
   font-family: var(--condensedblack-family);
   margin-bottom: 3vw;
   filter: var(--dropshadow);
+  max-width: 950px;
 }
 
 .reach-out-info {
@@ -29,30 +32,53 @@
   color: white;
   text-align: center;
   -webkit-text-stroke: 2px black;
-  font-size: 13vw;
+  font-size: 3.5rem;
   margin-bottom: 0;
   margin-top: 10vw;
+
+  @media (width >= 600px) {
+    font-size: 6rem;
+  }
+
+  @media (width >= 900px) {
+    font-size: 8.25rem;
+  }
 }
 
 .reach-out-form {
   width: 60vw;
-  font-size: 2vw;
+  font-size: .75rem;
   margin-bottom: 17vw;
+
+  @media (width >= 600px) {
+    font-size: 1rem;
+  }
+
+  @media (width >= 900px) {
+    font-size: 2rem;
+    width: 690px;
+  }
 }
 
 .reach-out-two-input {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .form-stacked-container {
   display: flex;
   flex-direction: column;
-  font-size: 2.25vw;
+  font-size: .75rem;
+
+  @media (width >= 600px) {
+    font-size: 1rem;
+  }
 }
 
 .form-meeting-container {
   display: flex;
+  justify-content: space-between;
 }
 
 .form-label {
@@ -65,16 +91,23 @@
   padding: .5vw;
   margin-bottom: 2vw;
   font-family: var(--neue-family);
-  font-size: 2vw;
+  font-size: .75rem;
+
+  @media (width >= 600px) {
+    font-size: 1rem;
+  }
 }
 
 .long-input {
-  height: 3.5vw;
   width: auto;
 }
 
 .small-input {
-  width: 28vw;
+  width: 25vw;
+
+  @media (width >= 600px) {
+    max-width: 320px;
+  }
 }
 
 .form-textarea {
@@ -83,7 +116,11 @@
 
 .form-meeting-message, .form-meeting-link {
   margin-top: -1vw;
-  font-size: 1.85vw;
+  font-size: .65rem;
+
+  @media (width >= 600px) {
+    font-size: 1rem;
+  }
 }
 
 .form-meeting-link {
@@ -95,7 +132,7 @@
   cursor: pointer;
   appearance: none;
   background-color: inherit;
-  transition: transform 1s ease-out;
+  transition: transform .25s ease-out;
 
   &:hover {
     transform: translate(1vw, -.5vw);
@@ -104,6 +141,7 @@
 
 .submit-image {
   width: 17vw;
+  max-width: 200px;
 }
 
 .modal-background {
@@ -130,7 +168,7 @@
   align-items: center;
   justify-content: center;
   font-family: var(--neue-family);
-  height: 15vw;
+  height: 15vh;
   border: 2px solid black;
   filter: var(--dropshadow);
 }
