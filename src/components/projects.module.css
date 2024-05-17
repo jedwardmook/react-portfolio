@@ -88,6 +88,11 @@
   cursor: pointer;
 }
 
+.project-card-link {
+  text-decoration: none;
+  color: black;
+}
+
 .project-image {
   width: 15vw;
   max-width: 250px;
@@ -239,6 +244,7 @@
   width: 85vw;
   border: 1px solid black;
   filter: drop-shadow(var(--dropshadow));
+  height: 95vh;
   margin-left: -2rem;
   max-width: 1000px;
 
@@ -276,7 +282,7 @@
 
 .image-viewer-hero-image {
   border: 1px solid black;
-  width: 60vw;
+  width: 45vw;
   max-width: 700px;
 }
 

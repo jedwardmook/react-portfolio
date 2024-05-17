@@ -8,6 +8,12 @@ import ProjectsContainer from './ProjectsContainer.js';
 function Projects() {
   const [heroProject, setHeroProject] = useState(projects[0]);
 
+  // const handleProjectContainerClick = (project) => {
+  //   setHeroProject(project);
+  //   const title = document.getElementsByClassName('projects-title');
+  //   title.scrollTo(0,);
+  // };
+
   return (
     <section id='projects' className={styles.projects}>
       <div className={styles['project-container']}>
