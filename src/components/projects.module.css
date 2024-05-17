@@ -65,6 +65,11 @@
   cursor: pointer;
 }
 
+.project-card-link {
+  text-decoration: none;
+  color: black;
+}
+
 .project-image {
   width: 20vw;
 }
@@ -151,6 +156,7 @@
   width: 85vw;
   border: 1px solid black;
   filter: drop-shadow(var(--dropshadow));
+  height: 95vh;
 }
 
 .image-viewer-hero-container, .image-viewer-tray {
@@ -177,7 +183,7 @@
 
 .image-viewer-hero-image {
   border: 1px solid black;
-  width: 60vw;
+  width: 45vw;
 }
 
 .image-viewer-hero-description {
