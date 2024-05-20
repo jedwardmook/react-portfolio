@@ -26,7 +26,7 @@ header {
   padding: 0 2rem;
   filter: var(--dropshadow);
 
-  @media (width >= 600px) {
+  @media (width >= 590px) {
     height: 3rem;
   }
 }
