@@ -126,8 +126,10 @@
   align-items: center;
   transform: skew(4deg, 15deg);
   font-family: var(--neue-family);
+}
 
-  @media (width >= 900px) {
+@media (width >= 900px) {
+  .hero-project-container {
     flex-direction: row;
     gap: 1vw;
     margin-bottom: 2vw;
@@ -148,8 +150,10 @@
   cursor: pointer;
   max-width: 600px;
   margin-top: 20px;
+}
 
-  @media (width >= 900px) {
+@media (width >= 900px) {
+  .hero-project-image {
     width: 500px;
     transform: skew(0deg, 0deg);
     margin-top: 40px;
