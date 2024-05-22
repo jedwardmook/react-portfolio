@@ -236,6 +236,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   z-index: 5;
 }
 
@@ -244,14 +245,17 @@
   background-color: white;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  justify-content: center;
+  width: 90vw;
   border: 1px solid black;
   filter: drop-shadow(var(--dropshadow));
-  height: 95vh;
+  height: 45vh;
   max-width: 1000px;
+  margin-top: -60px;
 
   @media (width >= 600px) {
     margin-left: 0;
+    height: 90vh;
   }
 }
 
@@ -275,6 +279,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  bottom: 0;
   left: 39vw;
 
   @media (width >= 1230px) {

@@ -123,8 +123,10 @@ span {
   outline: 1px solid black;
   margin-top: .75rem;
   text-decoration: none;
+}
 
-  @media (width >= 670px) {
+@media (width >= 670px) {
+  .socials-link {
     font-size: 1.5rem;
   }
 }
