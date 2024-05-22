@@ -1,7 +1,6 @@
 {
   "name": "react-portfolio",
   "version": "0.1.0",
-  "homepage": "http://jedwardmook.github.io/react-portfolio",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
