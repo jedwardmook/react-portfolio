@@ -233,7 +233,6 @@
   justify-content: center;
   align-items: center;
   z-index: 5;
-  max-width: var(--max-width);
 }
 
 .image-viewer-container {
@@ -241,11 +240,10 @@
   background-color: white;
   align-items: center;
   flex-direction: column;
-  width: 85vw;
+  width: 100vw;
   border: 1px solid black;
   filter: drop-shadow(var(--dropshadow));
   height: 95vh;
-  margin-left: -2rem;
   max-width: 1000px;
 
   @media (width >= 600px) {

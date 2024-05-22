@@ -9,7 +9,7 @@ function Home() {
     <section className={styles.home}>
       <img className={styles.me} src={me} alt='John Mook'/>
       <div className={styles['info-container']}>
-        <h2 className={styles.hello}><strong>Hello!!</strong> My name is <span>John E Mook</span>.</h2>
+        <h2 className={styles.hello}><strong>Hello!</strong> My name is <span>John E Mook</span>.</h2>
         <div className={styles['bio-container']}>
           <p className={styles.about}>I&apos;m a Fullstack Software Engineer building web applications out of Chicago, IL. I&apos;m experienced with html, css, sass, javascript, typescript, react, ruby, and ruby on rails.</p>
           {technologiesArr.map((obj) => {

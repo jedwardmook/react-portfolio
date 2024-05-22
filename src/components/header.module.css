@@ -61,8 +61,10 @@ header {
 
 .nav {
   display: none;
+}
 
-  @media (width >= 590px){
+@media (width >= 590px){
+  .nav {
     display: flex;
     gap: 1rem;
     list-style-type: none;
