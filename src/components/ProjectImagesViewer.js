@@ -20,7 +20,7 @@ function ProjectImagesViewer({ styles, images, isViewerOpen, setIsViewerOpen }) 
   return (
     <div id='background' className={styles['image-viewer-background']} onClick={handleClickBackground}>
       <div className={styles['image-viewer-close-container']}>
-        <button className={styles['image-viewer-close']} onClick={() => setIsViewerOpen(!isViewerOpen)}><img src={close} /></button>
+        <button className={styles['image-viewer-close']} onClick={() => setIsViewerOpen(!isViewerOpen)}><img src={close} alt='close'/></button>
       </div>
       <div className={styles['image-viewer-container']}>
         <div className={styles['image-viewer-hero-container']}>
@@ -39,7 +39,12 @@ function ProjectImagesViewer({ styles, images, isViewerOpen, setIsViewerOpen }) 
 
 ProjectImagesViewer.propTypes = {
   styles : PropTypes.object,
-  images : PropTypes.array,
+  images : PropTypes.arrayOf(
+    PropTypes.shape({
+      link: PropTypes.string.isRequired,
+      description: PropTypes.string,
+    })
+  ),
   isViewerOpen : PropTypes.bool,
   setIsViewerOpen : PropTypes.func
 };
