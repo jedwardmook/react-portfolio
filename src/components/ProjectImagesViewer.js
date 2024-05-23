@@ -9,10 +9,16 @@ function ProjectImagesViewer({ styles, images, isViewerOpen, setIsViewerOpen }) 
     setHeroImage(images[0]);
   }, [images]);
 
+  const handleClickBackground = (e) => {
+    if (e.target.id === 'background') {
+      setIsViewerOpen(!isViewerOpen);
+    }
+  };
+
   if (!isViewerOpen) return null;
 
   return (
-    <div className={styles['image-viewer-background']}>
+    <div id='background' className={styles['image-viewer-background']} onClick={handleClickBackground}>
       <div className={styles['image-viewer-close-container']}>
         <button className={styles['image-viewer-close']} onClick={() => setIsViewerOpen(!isViewerOpen)}><img src={close} /></button>
       </div>

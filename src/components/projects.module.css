@@ -281,8 +281,10 @@
   cursor: pointer;
   bottom: 0;
   left: 39vw;
+}
 
-  @media (width >= 1230px) {
+@media (width >= 1230px) {
+  .image-viewer-close {
     left: 33vw;
   }
 }
