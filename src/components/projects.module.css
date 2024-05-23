@@ -41,6 +41,7 @@
   font-size: 1rem;
   padding-bottom: 1vw;
   cursor: pointer;
+  color: black;
 
   @media (width >= 600px) {
     font-size: 2rem;
@@ -167,6 +168,7 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
+  color: black;
 
   @media (width >= 600px) {
     font-size: 1rem;
@@ -252,6 +254,7 @@
   height: 45vh;
   max-width: 1000px;
   margin-top: -60px;
+  margin-left: -20px;
 
   @media (width >= 600px) {
     margin-left: 0;
@@ -274,13 +277,20 @@
 }
 
 .image-viewer-close {
-  position: relative;
-  width: 5vw;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  bottom: 0;
-  left: 39vw;
+  display: none;
+}
+
+@media (width >= 600px) {
+  .image-viewer-close {
+    position: relative;
+    display: block;
+    width: 3rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    bottom: 0;
+    left: 38vw;
+  }
 }
 
 @media (width >= 1230px) {
@@ -291,8 +301,13 @@
 
 .image-viewer-hero-image {
   border: 1px solid black;
-  width: 45vw;
+  width: 70vw;
   max-width: 700px;
+
+  @media (width >= 570px) {
+    width: 55vw;
+    max-width: 700px;
+  }
 }
 
 .image-viewer-hero-description {
