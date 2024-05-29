@@ -158,7 +158,6 @@
 }
 
 .modal-header {
-  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -168,16 +167,16 @@
   align-items: center;
   justify-content: center;
   font-family: var(--neue-family);
-  height: 15vh;
+  height: 20vh;
   border: 2px solid black;
   filter: var(--dropshadow);
 }
 
 .modal-button {
-  border: none;
+  border: 1px solid black;
   border-radius: 2vw;
   background-color: var(--purple-color);
   filter: var(--dropshadow);
   padding: 1vw 2vw;
-  margin-top: 1vw;
+  margin-bottom: 1rem;
 }

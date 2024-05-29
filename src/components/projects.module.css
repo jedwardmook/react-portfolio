@@ -50,6 +50,7 @@
 
 .projects-tray-button:disabled {
   cursor: default;
+  color: rgb(0 0 0 / 40%);
 }
 
 .projects-title {
